@@ -1,0 +1,33 @@
+<%- include ('../partials/header.ejs')%>
+
+
+<div class="container">
+            <header class ="jumbotron">
+                <div class="container">
+                    <h1>Welcome to YelpCamp !</h1>
+                    <p>View our campgrounds from all over the world</p>
+                    <p><a class="btn btn-primary btn-large" href="/index/new">Add new campground</a></p>
+                </div>
+            </header>
+    </div>
+<div class="container">
+    <div class="row text-centre" style="display:flex; flex-wrap:wrap;">     
+            <%cg.forEach(function(i){%>
+             <div class="col-md-3 col-sm-6">
+                    <img src="<%=i.image%>" class="img-thumbnail">
+                    <div class="caption">
+                    <h4><%=i.name%></h4>
+                    </div>
+                    <p>
+                        <a href="/index/<%= i._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+            </div>    
+            <%});%>
+    
+     
+    </div>
+
+</div>
+
+
+<%- include ('../partials/footer.ejs')%>

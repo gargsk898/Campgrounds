@@ -5,7 +5,7 @@ passport    = require("passport"),
 
 
 router.get("/",function (req,res){
-    res.render("landing");
+    res.render("index");
 });
 //==================================
 //Authentication Routes

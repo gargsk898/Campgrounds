@@ -1,12 +1,43 @@
-<%- include("partials/header") %>
-<h1>This is  register page</h1>
-<form action="/register" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit">Button</button>
-</form>
+<%- include ('./partials/header.ejs')%>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center;">Sign Up here ! </h1>
+        <div style="width:30%;margin:25px auto;">
+            <form action="/register" method="POST" >
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" <input type="email" id="email" placeholder="email" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="password">
+                </div>
+                
+                <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Register</button>
+                </div>
+                
+            </form>
+            <div class="container">
+                <a href="/register" class="btn btn-xs btn-success">Already a User?</a>
+                <a href="/index"  class="btn btn-xs btn-danger">View all campgrounds as a guest</a> 
+            </div>
+             
+        </div>
+      
+    </div>
+    
+</div>
 
-<a href ="/login">Login</a>
-<a href="/logout">Logout</a>
-<a href="/register">Register</a>
-<%- include("partials/footer") %>
+<%- include ('./partials/footer.ejs')%>
+
+
+
+
+
+
+
+
+
